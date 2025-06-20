@@ -22,6 +22,11 @@ app.use("/api/recipe", RecipeRouter)
 /*****User Route******/
 app.use("/api/user", UserRouter)
 
+/*******Await Route*********/
+app.get("/", (req, res) => {
+    res.send("Server is awake")
+})
+
 /*********Page not found**********/
 app.use("", (req, res) => {
     res.status(404).json({
